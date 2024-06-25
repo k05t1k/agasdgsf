@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <h1>Login</h1>
+    {% if error %}
+        <div class="error-message">
+            {{ error }}
+            <a href="{{ url_for('login') }}"><button>Try Again</button></a>
+        </div>
+    {% else %}
+        <form action="{{ url_for('login') }}" method="post">
+            <label for="public_key">Public Key:</label>
+            <input type="text" id="public_key" name="public_key" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Login">
+        </form>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/general.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('create_estate') }}">Create Estate</a></li>
+                <li><a href="{{ url_for('change_estate_status') }}">Change Estate Status</a></li>
+                <li><a href="{{ url_for('create_advertisement') }}">Create Advertisement</a></li>
+                <li><a href="{{ url_for('change_ad_status') }}">Change Ad Status</a></li>
+                <li><a href="{{ url_for('buy_estate') }}">Buy Estate</a></li>
+                <li><a href="{{ url_for('withdraw_funds') }}">Withdraw Funds</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="button-container">
+            <a href="{{ url_for('get_balance_on_contract') }}"><button class="button">Get Balance</button></a>
+            <a href="{{ url_for('get_estates') }}"><button class="button">Get Estates</button></a>
+            <a href="{{ url_for('get_ads') }}"><button class="button">Get Ads</button></a>
+        </div>        
+    </main>    
+</body>
+</html>

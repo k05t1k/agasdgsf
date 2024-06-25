@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Ads</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/get_ads.css') }}">
+</head>
+<body>
+    <h1>Get Ads</h1>
+    <p>{{ message | safe }}</p>
+    <a href="{{ url_for('general') }}"><button>Return to Main Page</button></a>
+</body>
+</html>

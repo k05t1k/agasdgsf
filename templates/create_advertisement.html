@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Advertisement</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/create_advertisement.css') }}">
+</head>
+<body>
+    <h1>Create Advertisement</h1>
+    {% if message %}
+        <div class="success-message">
+            {{ message }}
+            <a href="{{ url_for('general') }}"><button>Return to Main Page</button></a>
+        </div>
+    {% else %}
+        <form action="{{ url_for('create_advertisement') }}" method="post">
+            <label for="estate_id">Estate ID:</label>
+            <input type="number" id="estate_id" name="estate_id" required>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" required>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            <input type="submit" value="Create">
+        </form>
+    {% endif %}
+</body>
+</html>
